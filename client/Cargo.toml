@@ -1,11 +1,8 @@
-cargo-features = ["per-package-target"]
-
 [package]
 name = "client"
 version = "0.1.0"
 authors = ["Jay Jackson <jj@jj.is-a.dev>"]
 edition = "2021"
-forced-target = "wasm32-unknown-unknown"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
