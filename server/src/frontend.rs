@@ -7,11 +7,11 @@ pub async fn frontend(uri: Uri) -> ([(header::HeaderName, &'static str); 1], &'s
         };
     }
     match uri.path() {
-        "/client_bg.wasm" => (
+        "/assets/client.wasm" => (
             ct!("application/wasm"),
             include_bytes!(concat!(env!("OUT_DIR"), "/client_bg.wasm")),
         ),
-        "/client.js" => (
+        "/assets/client.js" => (
             ct!("text/javascript"),
             include_bytes!(concat!(env!("OUT_DIR"), "/client.js")),
         ),
